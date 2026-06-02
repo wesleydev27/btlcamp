@@ -3,7 +3,7 @@
    Altere aqui para mudar o número em todo o site
    Formato: código do país + DDD + número (sem espaços ou traços)
    ================================================ */
-const WA = '5511996905490';
+const WA = '5519997809406';
 
 /* ================================================
    LISTA DE SERVIÇOS
