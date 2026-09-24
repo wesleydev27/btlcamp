@@ -112,7 +112,7 @@ function renderServices() {
     <article class="service-card reveal">
       <div class="service-img">
         ${s.img
-          ? `<img src="${s.img}" alt="${s.title}" style="width:100%;height:100%;object-fit:cover;display:block">`
+          ? `<img src="${s.img.replace('.webp', '-800.webp')}" srcset="${s.img.replace('.webp', '-480.webp')} 480w, ${s.img.replace('.webp', '-800.webp')} 800w" sizes="(max-width: 700px) 92vw, 400px" alt="${s.title}" width="800" height="533" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">`
           : `<svg viewBox="0 0 24 24" fill="none" stroke="#1253a4" stroke-width="1.2" aria-hidden="true" style="width:56px;height:56px;opacity:.35">${s.icon}</svg>`
         }
       </div>
@@ -234,6 +234,11 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
    - delay     : tempo de espera antes de começar (em ms)
    ================================================ */
 function maquinaDeEscrever(elemento, velocidade = 38, delay = 0) {
+  /* Cancela uma digitação anterior ainda em andamento neste elemento,
+     senão duas digitações escrevem ao mesmo tempo e o texto embaralha */
+  clearTimeout(elemento._digitacaoEspera);
+  clearInterval(elemento._digitacaoIntervalo);
+
   const textoCompleto = elemento.textContent.trim();
 
   /* Guarda o texto completo para leitores de tela (acessibilidade) */
@@ -241,12 +246,12 @@ function maquinaDeEscrever(elemento, velocidade = 38, delay = 0) {
   elemento.textContent = '';
   elemento.style.visibility = 'visible';
 
-  setTimeout(() => {
+  elemento._digitacaoEspera = setTimeout(() => {
     let i = 0;
-    const intervalo = setInterval(() => {
-      elemento.textContent += textoCompleto[i];
+    elemento._digitacaoIntervalo = setInterval(() => {
       i++;
-      if (i >= textoCompleto.length) clearInterval(intervalo); /* Para ao terminar */
+      elemento.textContent = textoCompleto.slice(0, i); /* Reescreve do zero: nunca acumula texto extra */
+      if (i >= textoCompleto.length) clearInterval(elemento._digitacaoIntervalo); /* Para ao terminar */
     }, velocidade);
   }, delay);
 }
@@ -280,10 +285,10 @@ let heroIndice     = 0; /* Começa no primeiro texto */
 /* Aplica o efeito de máquina de escrever no subtítulo e troca o título */
 function aplicarTextoHero(indice, primeiraVez = false) {
   const texto = HERO_TEXTOS[indice];
-  const delay = primeiraVez ? 900 : 400; /* Na primeira vez espera as animações CSS */
+  const delay = primeiraVez ? 0 : 400; /* Na primeira vez começa na hora (a página aparece mais rápido pro Google) */
 
-  /* Troca o título com fade */
-  if (heroH1) {
+  /* Troca o título com fade (na primeira vez o título já está certo no HTML: não mexe, senão atrasa o carregamento) */
+  if (heroH1 && !primeiraVez) {
     heroH1.style.opacity    = '0';
     heroH1.style.transform  = 'translateY(20px)';
     heroH1.style.transition = 'opacity .4s, transform .4s';

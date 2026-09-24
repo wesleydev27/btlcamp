@@ -2,29 +2,40 @@
 <html lang="pt-BR">
 <head>
   
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17639376580"></script>
+  <!-- Google tag (gtag.js) — carregado depois da página abrir, para não atrasar o site.
+       Os comandos abaixo ficam na fila (dataLayer) e são enviados quando o script chega. -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'AW-17639376580');
+
+  window.addEventListener('load', function () {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17639376580';
+    document.head.appendChild(s);
+  });
 </script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Assistência Técnica especializada em conserto de Geladeira, Lavadora, Secadora, Lava e Seca, Lava Louça, Freezer e Placas Eletrônicas. Atendimento rápido, peças originais e garantia.">
-  <title>BTL assistência técnica – Conserto e Manutenção de Eletrodomésticos</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="BTL Assistência Técnica Especializada em conserto de Geladeira, Lavadora, Secadora, Lava e Seca, Lava Louça, Freezer e Placas Eletrônicas. Atendimento rápido, peças originais e garantia.">
+  <title>BTL Assistência Técnica Especializada – Conserto e Manutenção de Eletrodomésticos</title>
+  <!-- Fontes do título e do texto: baixam junto com o CSS, sem esperar por ele -->
+  <link rel="preload" href="assets/fonts/poppins-900.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- ?v=: troque o número a cada atualização do CSS/JS para o navegador baixar a versão nova -->
+  <link rel="stylesheet" href="css/style.css?v=2">
   <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
 </head>
 <body>
 
 <!-- HEADER -->
 <header id="header">
-  <a href="#" class="logo" aria-label="BTL assistência técnica — página inicial">
-      <img src="./assets/logo.png" alt="Logo" width="120" height="120">
+  <a href="#" class="logo" aria-label="BTL Assistência Técnica Especializada — página inicial">
+      <img src="assets/logo-300.webp" alt="BTL Assistência Técnica Especializada" width="100" height="68">
   </a>
   <a href="https://wa.me/5519997809406?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." class="btn-header" target="_blank" rel="noopener noreferrer" aria-label="Pedir orçamento grátis pelo WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:20px;height:20px;fill:white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Orçamento Grátis</a>
 </header>
@@ -52,7 +63,7 @@
   </div>
   <div class="hero-bg"></div>
   <div class="hero-content">
-    <div class="hero-tag">Assistência Técnica Especializada</div>
+    <div class="hero-tag">BTL Assistência Técnica Especializada</div>
     <h1>Seu Eletrodoméstico <span class="highlight">Funcionando</span><br>Hoje Mesmo</h1>
     <p>Conserto rápido, peças originais e garantia em todos os serviços.</p>
     <div class="hero-btns">
@@ -86,27 +97,27 @@
   </div>
   <div class="brands-track-wrap">
     <div class="brands-track">
-      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/samsung.svg" alt="samsung"></span></div>
-      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/panasonic.svg" alt="panasonic"></span></div>
-      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/whirlpool.svg" alt="whirlpool"></span></div>
-      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/philco-logo.svg" alt="philco"></span></div>
-      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/brastemp.svg" alt="brastemp"></span></div>
-      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/consul.svg" alt="consul"></span></div>
-      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/midea.svg" alt="midea"></span></div>
-      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/bosch.svg" alt="bosch"></span></div>
-      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/electrolux.svg" alt="electrolux"></span></div>
-      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/lg.svg" alt="lg"></span></div>
+      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/samsung.svg" alt="samsung" loading="lazy" decoding="async"></span></div>
+      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/panasonic.svg" alt="panasonic" loading="lazy" decoding="async"></span></div>
+      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/whirlpool.svg" alt="whirlpool" loading="lazy" decoding="async"></span></div>
+      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/philco-logo.svg" alt="philco" loading="lazy" decoding="async"></span></div>
+      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/brastemp.svg" alt="brastemp" loading="lazy" decoding="async"></span></div>
+      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/consul.svg" alt="consul" loading="lazy" decoding="async"></span></div>
+      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/midea.svg" alt="midea" loading="lazy" decoding="async"></span></div>
+      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/bosch.svg" alt="bosch" loading="lazy" decoding="async"></span></div>
+      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/electrolux.svg" alt="electrolux" loading="lazy" decoding="async"></span></div>
+      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/lg.svg" alt="lg" loading="lazy" decoding="async"></span></div>
       <!-- duplicado para loop contínuo — oculto de leitores de tela -->
-   <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/samsung.svg" alt="samsung"></span></div>
-      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/panasonic.svg" alt="panasonic"></span></div>
-      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/whirlpool.svg" alt="whirlpool"></span></div>
-      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/philco-logo.svg" alt="philco"></span></div>
-      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/brastemp.svg" alt="brastemp"></span></div>
-      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/consul.svg" alt="consul"></span></div>
-      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/midea.svg" alt="midea"></span></div>
-      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/bosch.svg" alt="bosch"></span></div>
-      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/electrolux.svg" alt="electrolux"></span></div>
-      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/lg.svg" alt="lg"></span></div>
+   <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/samsung.svg" alt="samsung" loading="lazy" decoding="async"></span></div>
+      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/panasonic.svg" alt="panasonic" loading="lazy" decoding="async"></span></div>
+      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/whirlpool.svg" alt="whirlpool" loading="lazy" decoding="async"></span></div>
+      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/philco-logo.svg" alt="philco" loading="lazy" decoding="async"></span></div>
+      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/brastemp.svg" alt="brastemp" loading="lazy" decoding="async"></span></div>
+      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/consul.svg" alt="consul" loading="lazy" decoding="async"></span></div>
+      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/midea.svg" alt="midea" loading="lazy" decoding="async"></span></div>
+      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/bosch.svg" alt="bosch" loading="lazy" decoding="async"></span></div>
+      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/electrolux.svg" alt="electrolux" loading="lazy" decoding="async"></span></div>
+      <div class="brand-logo"><span class="brand-logo-text"><img src="./assets/brands/lg.svg" alt="lg" loading="lazy" decoding="async"></span></div>
   </div>
 </section>
 
@@ -157,7 +168,7 @@
   <div class="about-inner">
     <div class="about-text reveal">
       <div class="about-badge">Quem Somos</div>
-      <h2 id="about-title">Concerto Técnico que você pode <span style="color:var(--blue)">confiar</span></h2>
+      <h2 id="about-title">Conserto Técnico que você pode <span style="color:var(--blue)">confiar</span></h2>
       <p>Somos especialistas no conserto, reparo e manutenção de eletrodomésticos da <strong>linha branca</strong>: Geladeira, Lavadora, Lava e Seca, Secadora, Lava-Louças, Freezer e Placas Eletrônicas.</p>
       <p>Nossa equipe é formada por técnicos treinados e certificados, comprometidos com a <strong>excelência no atendimento</strong> e na entrega de soluções práticas com <strong>preço justo</strong>.</p>
       <div class="about-features">
@@ -176,16 +187,12 @@
       </div>
       <div class="about-cta-row">
         <a href="https://wa.me/5519997809406?text=Olá!%20Gostaria%20de%20um%20orçamento." class="btn-cta" target="_blank" rel="noopener noreferrer">Solicitar Orçamento</a>
-        <!-- <div class="about-phone">ou ligue: <a href="tel:+5519997809406">(11) 99690-5490</a></div>-->
+        <!-- <div class="about-phone">ou ligue: <a href="tel:+5519997809406">(19) 99780-9406</a></div>-->
       </div>
     </div>
     <div class="about-img reveal reveal-delay-2">
-      <div class="img-placeholder-stripes"></div>
-      <div class="img-placeholder">
-        <!-- substitua por: <img src="assets/equipe.jpg" alt="Equipe FM"> -->
-        <svg viewBox="0 0 24 24" fill="none" stroke="#1253a4" stroke-width="1.5"><rect x="2" y="3" width="20" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M6 21v-1a6 6 0 0112 0v1"/></svg>
-        <span><!--[ foto do técnico / equipe ]--></span>
-      </div>
+      <!-- Foto provisória: troque por assets/equipe.webp quando tiver a foto da equipe -->
+      <img src="assets/conserto-de-lavadora-800.webp" srcset="assets/conserto-de-lavadora-480.webp 480w, assets/conserto-de-lavadora-800.webp 800w, assets/conserto-de-lavadora.webp 1448w" sizes="(max-width: 900px) 92vw, 540px" alt="Técnico da BTL consertando uma máquina de lavar" loading="lazy" decoding="async">
     </div>
   </div>
 </section>
@@ -196,7 +203,7 @@
 <section id="differentials" aria-labelledby="differentials-title">
   <div class="differentials-header reveal">
     <div class="section-tag" style="background:rgba(255,255,255,.08);color:#7dc4ff">DIFERENCIAIS</div>
-    <h2 id="differentials-title" class="section-title white">Por que escolher a FM?</h2>
+    <h2 id="differentials-title" class="section-title white">Por que escolher a BTL?</h2>
     <p class="section-sub white" style="margin:10px auto 0">Uma equipe comprometida com o sucesso do seu equipamento.</p>
   </div>
   <div class="diff-grid">
@@ -248,55 +255,37 @@
 <!-- CONTACT -->
 <section id="contact" aria-labelledby="contact-title">
   <div class="contact-inner">
-    <div class="reveal">
+    <div class="contact-head reveal">
       <div class="section-tag">CONTATO</div>
-      <h2 id="contact-title" style="font-size:clamp(1.5rem,3vw,2rem);font-weight:800;margin:10px 0 28px">Fale conosco agora</h2>
-      <div class="contact-items">
-        <div class="contact-item">
-           <!-- <div class="contact-item-icon">
-            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-          </div>
-        <div>
-            <h4>WhatsApp</h4>
-            <a href="https://wa.me/5519997809406" target="_blank" rel="noopener noreferrer">(11) 99690-5490</a>
-          </div> -->
+      <h2 id="contact-title">Fale conosco agora</h2>
+      <p>Chame no WhatsApp, conte o problema e receba seu orçamento sem compromisso.</p>
+    </div>
+    <div class="contact-cards">
+      <div class="contact-card reveal">
+        <div class="contact-item-icon">
+          <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
         </div>
-        <div class="contact-item">
-          <!-- <div class="contact-item-icon">
-            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-          </div>
-          <div>
-            <h4>Telefone</h4>
-            <a href="tel:+5519997809406">(11) 99690-5490</a>
-          </div> -->
+        <h3>Atendimento a domicílio</h3>
+        <p>Nosso técnico vai até a sua casa.</p>
+      </div>
+      <div class="contact-card reveal reveal-delay-1">
+        <div class="contact-item-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 10.41l3.3 3.3-1.42 1.41L11 13.24V6h2z"/></svg>
         </div>
-        <div class="contact-item">
-          <div class="contact-item-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-          </div>
-          <div>
-            <h4>Endereço</h4>
-            <p>[ A ser definido ] — São Paulo / SP</p>
-          </div>
+        <h3>Horário de Atendimento</h3>
+        <p>Seg – Sex: 8h às 18h<br>Sábado: 8h às 14h</p>
+      </div>
+      <div class="contact-card reveal reveal-delay-2">
+        <div class="contact-item-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
         </div>
-        <div class="contact-item">
-          <div class="contact-item-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          </div>
-          <div>
-            <h4>Horário de Atendimento</h4>
-            <p>Seg – Sex: 8h às 18h<br>Sábado: 8h às 14h</p>
-          </div>
-        </div>
+        <h3>Orçamento grátis</h3>
+        <p>Você aprova antes de qualquer serviço.</p>
       </div>
     </div>
-    <div class="map-wrap reveal reveal-delay-2">
-      <!-- Cole aqui o iframe do Google Maps -->
-      <!-- <iframe src="https://www.google.com/maps/embed?pb=..." allowfullscreen loading="lazy"></iframe> -->
-      <div style="background:var(--blue-pale);height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;border-radius:16px">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#1253a4" stroke-width="1.5" style="width:48px;height:48px;opacity:.3"><path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6-10l6-3m0 13l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4"/></svg>
-        <span style="font-family:monospace;font-size:.78rem;color:var(--blue);opacity:.6;text-align:center"><!--[ Cole aqui o iframe do Google Maps ]--></span>
-      </div>
+    <div class="contact-cta reveal reveal-delay-3">
+      <a href="https://wa.me/5519997809406?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." class="btn-cta" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp</a>
+      <p class="about-phone contact-phone">ou ligue: <a href="tel:+5519997809406">(19) 99780-9406</a></p>
     </div>
   </div>
 </section>
@@ -308,7 +297,7 @@
   <div class="footer-inner">
     <div class="footer-brand">
       <a href="#" class="logo">
-       <img src="./assets/logo.png" alt="Logo" width="125" height="130">
+       <img src="assets/logo-300.webp" alt="Logo" width="125" height="130" loading="lazy" decoding="async">
       </a>
       <p>Especialistas em conserto e manutenção de eletrodomésticos. Qualidade, agilidade e garantia em todos os serviços.</p>
     </div>
@@ -327,14 +316,14 @@
       <h4>Horário</h4>
       <p>Seg – Sex <span>8h às 18h</span></p>
       <p>Sábado <span>8h às 14h</span></p>
-      <p>Domingo <span style="color:rgba(255,255,255,.35)">Fechado</span></p>
+      <p>Domingo <span style="color:rgba(255,255,255,.6)">Fechado</span></p>
       <br>
       <!-- <h4>Contato</h4>
-      <p><a href="https://wa.me/5519997809406" target="_blank" rel="noopener noreferrer" style="color:#7dc4ff">(11) 99690-5490</a></p> -->
+      <p><a href="https://wa.me/5519997809406" target="_blank" rel="noopener noreferrer" style="color:#7dc4ff">(19) 99780-9406</a></p> -->
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2026 BTL assistência técnica – Todos os direitos reservados</p>
+    <p>© 2026 BTL Assistência Técnica Especializada – Todos os direitos reservados</p>
     <a href="#">Política de Privacidade</a>
   </div>
 </footer>
@@ -344,6 +333,6 @@
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
 </a>
 
-<script src="js/main.js"></script>
+<script src="js/main.js?v=2"></script>
 </body>
 </html>
